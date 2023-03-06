@@ -5,9 +5,8 @@
 
 go-set 定义了简单的集合标准，提供了部分集合的能力。
 
-## 2.目标
+## 2.支持
 - [x] String Set - 字符串集合
-- [ ] Interface Set
 
 ## 3.使用
 String Set 字符串集合
