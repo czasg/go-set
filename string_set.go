@@ -59,7 +59,7 @@ func (s StringSet) Equals(ss StringSet) bool {
 
 // 集合是否包含
 func (s StringSet) Contains(ss StringSet) bool {
-	return s.Has(ss.Keys()...)
+	return s.HasAll(ss.Keys()...)
 }
 
 func (s StringSet) Add(keys ...string) StringSet {
@@ -76,7 +76,7 @@ func (s StringSet) Del(keys ...string) StringSet {
 	return s
 }
 
-func (s StringSet) Has(keys ...string) bool {
+func (s StringSet) HasAll(keys ...string) bool {
 	for _, key := range keys {
 		_, ok := s[key]
 		if !ok {
@@ -86,7 +86,7 @@ func (s StringSet) Has(keys ...string) bool {
 	return true
 }
 
-func (s StringSet) Any(keys ...string) bool {
+func (s StringSet) HasAny(keys ...string) bool {
 	for _, key := range keys {
 		_, ok := s[key]
 		if ok {

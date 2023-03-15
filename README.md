@@ -10,8 +10,8 @@ go-set 定义了简单的集合标准，提供了部分集合的能力。
 String Set 字符串集合
 - `Add(keys ...string)`：新增集合元素
 - `Del(keys ...string)`：删除集合元素
-- `Has(keys ...string)`：集合包含全部元素
-- `Any(keys ...string)`：集合存在任意元素
+- `HasAll(keys ...string)`：集合包含全部元素
+- `HasAny(keys ...string)`：集合存在任意元素
 - `Len()`：集合长度
 - `Keys()`：集合元素列表
 - `Intersect(ss StringSet)`：交集

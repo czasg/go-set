@@ -53,22 +53,22 @@ func TestStringSet(t *testing.T) {
 		}
 	}
 	{
-		// Has
+		// HasAll
 		set1 := NewStringSet("1", "2", "3", "4")
-		if !set1.Has("1", "2", "3") {
+		if !set1.HasAll("1", "2", "3") {
 			t.Error("Has异常")
 		}
-		if set1.Has("3", "9") {
+		if set1.HasAll("3", "9") {
 			t.Error("Has异常")
 		}
 	}
 	{
-		// Any
+		// HasAny
 		set1 := NewStringSet("1", "2", "3", "4")
-		if !set1.Any("2", "3", "4", "5") {
+		if !set1.HasAny("2", "3", "4", "5") {
 			t.Error("Any异常")
 		}
-		if set1.Any() {
+		if set1.HasAny() {
 			t.Error("Any异常")
 		}
 	}
